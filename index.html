@@ -209,9 +209,7 @@
 
         <section class="about-text">
           <p>
-            Hi!
-            . . .
-            Yup. That's about me!
+            Programmer. Philosopher. Poet.
           </p>          
         </section>
 
@@ -228,7 +226,9 @@
                   </figure>
   
                   <h4 class="h4 testimonials-item-title" data-testimonials-title>Motto</h4>
-  
+                  
+                  <time class="testimonials-date" data-testimonials-date>Everyday</time>
+
                   <div class="testimonials-text" data-testimonials-text>
                     <p>
                         If you only do what you can do, you'll never be more than who you are.
@@ -325,6 +325,8 @@
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>SS</h4>
+                
+                <time class="testimonials-date" data-testimonials-date>4 Sep, 2022</time>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
@@ -344,6 +346,8 @@
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>JM</h4>
 
+                <time class="testimonials-date" data-testimonials-date>24 June, 2021</time>
+
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
                     He's a fool.
@@ -362,6 +366,8 @@
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>EE</h4>
 
+                <time class="testimonials-date" data-testimonials-date>13 Oct, 2020</time>
+
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
                     Seriously? This guy? You're better off doing it yourself.
@@ -379,6 +385,8 @@
                 </figure>
 
                 <h4 class="h4 testimonials-item-title" data-testimonials-title>HW</h4>
+                
+                <time class="testimonials-date" data-testimonials-date>31 Aug, 2023</time>
 
                 <div class="testimonials-text" data-testimonials-text>
                   <p>
@@ -419,8 +427,8 @@
             <div class="modal-content">
 
               <h4 class="h3 modal-title" data-modal-title>SS</h4>
-
-              <time datetime="2022-06-14">14 June, 2022</time>
+              
+              <time data-modal-date>14 June, 2022</time>
 
               <div data-modal-text>
                 <p>
@@ -784,15 +792,15 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Programming</button>
+              <button data-filter-btn>Web development</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Philosophy</button>
+              <button data-filter-btn>Web design</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Poetry</button>
+              <button data-filter-btn>Applications</button>
             </li>
 
           </ul>
@@ -816,15 +824,15 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Programming</button>
+                <button data-select-item>Web development</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Philosophy</button>
+                <button data-select-item>Web design</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Poetry</button>
+                <button data-select-item>Applications</button>
               </li>
 
             </ul>
@@ -1017,26 +1025,80 @@
 
         <section class="blog-posts">
 
+            <ul class="filter-list">
+
+                <li class="filter-item">
+                  <button class="active" data-filter-btn>All</button>
+                </li>
+    
+                <li class="filter-item">
+                  <button data-filter-btn>Programming</button>
+                </li>
+    
+                <li class="filter-item">
+                  <button data-filter-btn>Philosophy</button>
+                </li>
+    
+                <li class="filter-item">
+                  <button data-filter-btn>Poetry</button>
+                </li>
+    
+            </ul>
+
+            <div class="filter-select-box">
+
+                <button class="filter-select" data-select>
+
+                    <div class="select-value" data-selecct-value>Select category</div>
+
+                    <div class="select-icon">
+                    <ion-icon name="chevron-down"></ion-icon>
+                    </div>
+
+                </button>
+
+                <ul class="select-list">
+
+                    <li class="select-item">
+                    <button data-select-item>All</button>
+                    </li>
+
+                    <li class="select-item">
+                    <button data-select-item>Programming</button>
+                    </li>
+
+                    <li class="select-item">
+                    <button data-select-item>Philosophy</button>
+                    </li>
+
+                    <li class="select-item">
+                    <button data-select-item>Poetry</button>
+                    </li>
+
+                </ul>
+
+            </div>
+      
           <ul class="blog-posts-list">
 
-            <li class="blog-post-item">
+            <li class="blog-post-item active" data-filter-item data-category="programming">
               <a href="#">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                  <img src="./assets/images/blog-1.jpg" alt="Programming conferences in 2022" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Programming</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+                  <h3 class="h3 blog-item-title">Programming conferences in 2022</h3>
 
                   <p class="blog-text">
                     Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
@@ -1047,27 +1109,27 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item active" data-filter-item data-category="philosophy">
               <a href="#">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                  <img src="./assets/images/blog-2.jpg" alt="AWR 101" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Philosophy</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+                  <h3 class="h3 blog-item-title">AWR 101</h3>
 
                   <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                    All the world's a stage.
                   </p>
 
                 </div>
@@ -1075,27 +1137,27 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <li class="blog-post-item active" data-filter-item data-category="poetry">
               <a href="#">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                  <img src="./assets/images/blog-3.jpg" alt="Poem 1" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Poetry</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+                  <h3 class="h3 blog-item-title">Poem 1</h3>
 
                   <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                    The woods are lovely, dark, and deep
                   </p>
 
                 </div>
@@ -1103,7 +1165,7 @@
               </a>
             </li>
 
-            <li class="blog-post-item">
+            <!-- <li class="blog-post-item">
               <a href="#">
 
                 <figure class="blog-banner-box">
@@ -1113,11 +1175,11 @@
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Programming</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
 
                   <h3 class="h3 blog-item-title">UI interactions of the week</h3>
@@ -1141,11 +1203,11 @@
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Programming</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
 
                   <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
@@ -1163,20 +1225,20 @@
               <a href="#">
 
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                  <img src="./assets/images/blog-6.jpg" alt="Programming digest #79" loading="lazy">
                 </figure>
 
                 <div class="blog-content">
 
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Programming</p>
 
                     <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2022-02-23">Feb 23, 2022</time>
                   </div>
 
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+                  <h3 class="h3 blog-item-title">Programming digest #79</h3>
 
                   <p class="blog-text">
                     Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
@@ -1184,8 +1246,8 @@
 
                 </div>
 
-              </a>
-            </li>
+              </a> 
+            </li> -->
 
           </ul>
 
