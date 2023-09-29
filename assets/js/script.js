@@ -58,38 +58,38 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 // custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
+const p_select = document.querySelector("[project-select]");
+const p_selectItems = document.querySelectorAll("[project-select-item]");
+const p_selectValue = document.querySelector("[project-select-value]");
+const p_filterBtn = document.querySelectorAll("[project-filter-btn]");
 
-select.addEventListener("click", function () { elementToggleFunc(this); });
+p_select.addEventListener("click", function () { elementToggleFunc(this); });
 
 // add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
+for (let i = 0; i < p_selectItems.length; i++) {
+  p_selectItems[i].addEventListener("click", function () {
 
     let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
+    p_selectValue.innerText = this.innerText;
+    elementToggleFunc(p_select);
+    p_filterFunc(selectedValue);
 
   });
 }
 
 // filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
+const p_filterItems = document.querySelectorAll("[project-filter-item]");
 
-const filterFunc = function (selectedValue) {
+const p_filterFunc = function (selectedValue) {
 
-  for (let i = 0; i < filterItems.length; i++) {
+  for (let i = 0; i < p_filterItems.length; i++) {
 
     if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+      p_filterItems[i].classList.add("active");
+    } else if (selectedValue === p_filterItems[i].getAttribute("project-category")) {
+      p_filterItems[i].classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      p_filterItems[i].classList.remove("active");
     }
 
   }
@@ -97,19 +97,77 @@ const filterFunc = function (selectedValue) {
 }
 
 // add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+let p_lastClickedBtn = p_filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
+for (let i = 0; i < p_filterBtn.length; i++) {
 
-  filterBtn[i].addEventListener("click", function () {
+  p_filterBtn[i].addEventListener("click", function () {
 
     let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
+    p_selectValue.innerText = this.innerText;
+    p_filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
+    p_lastClickedBtn.classList.remove("active");
     this.classList.add("active");
-    lastClickedBtn = this;
+    p_lastClickedBtn = this;
+
+  });
+
+}
+
+// custom select variables
+const b_select = document.querySelector("[blog-select]");
+const b_selectItems = document.querySelectorAll("[blog-select-item]");
+const b_selectValue = document.querySelector("[blog-select-value]");
+const b_filterBtn = document.querySelectorAll("[blog-filter-btn]");
+
+b_select.addEventListener("click", function () { elementToggleFunc(this); });
+
+// add event in all select items
+for (let i = 0; i < b_selectItems.length; i++) {
+  b_selectItems[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    b_selectValue.innerText = this.innerText;
+    elementToggleFunc(b_select);
+    b_filterFunc(selectedValue);
+
+  });
+}
+
+// filter variables
+const b_filterItems = document.querySelectorAll("[blog-filter-item]");
+
+const b_filterFunc = function (selectedValue) {
+
+  for (let i = 0; i < p_filterItems.length; i++) {
+
+    if (selectedValue === "all") {
+      b_filterItems[i].classList.add("active");
+    } else if (selectedValue === b_filterItems[i].getAttribute("blog-category")) {
+      b_filterItems[i].classList.add("active");
+    } else {
+      b_filterItems[i].classList.remove("active");
+    }
+
+  }
+
+}
+
+// add event in all filter button items for large screen
+let b_lastClickedBtn = b_filterBtn[0];
+
+for (let i = 0; i < b_filterBtn.length; i++) {
+
+  b_filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    b_selectValue.innerText = this.innerText;
+    b_filterFunc(selectedValue);
+
+    b_lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    b_lastClickedBtn = this;
 
   });
 
