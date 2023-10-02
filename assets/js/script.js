@@ -140,7 +140,7 @@ const b_filterItems = document.querySelectorAll("[blog-filter-item]");
 
 const b_filterFunc = function (selectedValue) {
 
-  for (let i = 0; i < p_filterItems.length; i++) {
+  for (let i = 0; i < b_filterItems.length; i++) {
 
     if (selectedValue === "all") {
       b_filterItems[i].classList.add("active");
