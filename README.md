@@ -1,2 +1,2 @@
-# DSN - Portfolio
-A personal portfolio website
+# DSN - An Assorted Identity
+A personal website
