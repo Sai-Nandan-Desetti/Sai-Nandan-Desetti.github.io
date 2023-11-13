@@ -1,2 +1,2 @@
 # DSN - An Assorted Identity
-A personal website
+A personal website.
